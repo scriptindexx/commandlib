@@ -81,7 +81,7 @@ do
         local DraggingInput, StartPosition
         local DragStart = Vector3.new(0,0,0)
         
-        local Main = CoreGui:FindFirstChild('H2G Command Line | .gg/puxxCphTnK').Main
+        local Main = CoreGui:FindFirstChild('Visual Command UI Library | .gg/puxxCphTnK').Main
         
         local function Update(Input)
             local Delta = Input.Position - DragStart
@@ -220,7 +220,7 @@ do
         BreakAllLoops = true
 
         for _, UI in next, CoreGui:GetChildren() do
-            if UI.Name == 'H2G Command Line | .gg/puxxCphTnK' then
+            if UI.Name == 'Visual Command UI Library | .gg/puxxCphTnK' then
                 for _, Item in next, UI.Main:GetChildren() do
                     if Item.Name ~= 'MainCorner' and Item.Name ~= 'MainStroke' then
                         Item:Destroy()
@@ -332,8 +332,8 @@ Library.Theme = nil
 -- // CreateWindow - Name, IntroText, IntroIcon, IntroBlur, IntroBlurIntensity, Theme, Position, Draggable, Prefix
 function Library:CreateWindow(Properties)
     -- // Properties
-    local Name = Utility:GetProperty('Window', 'Name', Properties) or 'H2G Command Line'
-    local IntroText = Utility:GetProperty('Window', 'IntroText', Properties) or 'H2G Command Line'
+    local Name = Utility:GetProperty('Window', 'Name', Properties) or 'Visual Command UI Library'
+    local IntroText = Utility:GetProperty('Window', 'IntroText', Properties) or 'Visual Command UI Library'
     local IntroIcon = Utility:GetProperty('Window', 'IntroIcon', Properties) or 'rbxassetid://10618644218'
     local IntroBlur = Utility:GetProperty('Window', 'IntroBlur', Properties) or false
     local IntroBlurIntensity = Utility:GetProperty('Window', 'IntroBlurIntensity', Properties) or 15
@@ -357,7 +357,7 @@ function Library:CreateWindow(Properties)
     -- // Create Elements
     local Container = Utility:Create('ScreenGui', {
         Parent = CoreGui,
-        Name = 'H2G Command Line | .gg/puxxCphTnK',
+        Name = 'Visual Command UI Library | .gg/puxxCphTnK',
         ResetOnSpawn = false
     }, {
         Utility:Create('Frame', {
