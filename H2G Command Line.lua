@@ -450,7 +450,7 @@ function Library:CreateWindow(Properties)
 
     task.wait(0.5)
 
-    Main['IntroImage']:Destroy()
+    Utility:Tween(Main['IntroImage'], {ImageTransparency = 0}, 0.25)
 
     task.wait(3)
 
@@ -458,7 +458,7 @@ function Library:CreateWindow(Properties)
 
     task.wait(0.5)
 
-    Main['IntroImage']:Destroy()
+    Utility:Tween(Main['IntroImage'], {ImageTransparency = 1}, 0.25)
 
     task.wait(0.5)
 
